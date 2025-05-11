@@ -1,0 +1,338 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 15px;
+    overflow: hidden; /* Ngăn scroll */
+}
+
+.container {
+    width: 100%;
+    max-width: 500px; /* Giảm độ rộng tối đa */
+    padding: 10px;
+    max-height: 90vh; /* Giảm chiều cao tối đa */
+}
+
+.app-window {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-window:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.window-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.window-controls {
+    display: flex;
+    gap: 8px;
+    margin-right: 16px;
+}
+
+.control {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.close {
+    background-color: #ff5f57;
+}
+
+.minimize {
+    background-color: #febc2e;
+}
+
+.expand {
+    background-color: #28c940;
+}
+
+.window-title {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.content {
+    padding: 12px;
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    max-height: calc(80vh - 40px); /* Đảm bảo không vượt quá kích thước container */
+}
+
+.avatar-container {
+    position: relative;
+    width: 260px; /* Tăng kích thước avatar lên lớn hơn */
+    height: 260px; /* Tăng kích thước avatar lên lớn hơn */
+    margin: 0 auto 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    background-color: #f8f8f8;
+}
+
+.avatar-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: all 0.12s ease;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.file-upload-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.file-upload-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.file-upload-group label {
+    font-size: 14px;
+    color: #333;
+}
+
+.file-input-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 10px;
+    transition: all 0.2s ease;
+}
+
+.file-input-wrapper:hover {
+    border-color: #66aaff;
+    background-color: #f0f7ff;
+}
+
+.file-input-wrapper input[type="file"] {
+    font-size: 14px;
+}
+
+.file-name {
+    margin-left: 10px;
+    font-size: 13px;
+    color: #666;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: right;
+}
+
+/* Textarea styling - làm to hơn và đẹp hơn */
+#transcript-text {
+    width: 100%;
+    height: 120px; /* Tăng chiều cao hơn nữa */
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    resize: none;
+    font-size: 16px; /* Tăng font size hơn nữa */
+    line-height: 1.5;
+    color: #333;
+    transition: all 0.2s ease;
+    margin-bottom: 10px; /* Thêm khoảng cách dưới */
+}
+
+#transcript-text:focus {
+    outline: none;
+    border-color: #66aaff;
+    background-color: #f0f7ff;
+    box-shadow: 0 0 0 3px rgba(102, 170, 255, 0.1);
+}
+
+#transcript-text::placeholder {
+    color: #aaa;
+}
+
+/* Sắp xếp nút xử lý và nút play trên cùng một hàng */
+.buttons-row {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.process-button, .play-button {
+    padding: 12px 0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    flex: 1; /* Phân chia không gian đều nhau */
+    text-align: center;
+    width: 50%; /* Đảm bảo mỗi nút chiếm đúng 50% */
+}
+
+.process-button {
+    background-color: #007aff;
+}
+
+.process-button:hover:not(:disabled) {
+    background-color: #0066dd;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 122, 255, 0.4);
+}
+
+.process-button:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: 0 1px 4px rgba(0, 122, 255, 0.3);
+}
+
+.play-button {
+    background-color: #34c759;
+}
+
+.play-button:hover:not(:disabled) {
+    background-color: #2bb350;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(52, 199, 89, 0.4);
+}
+
+.play-button:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: 0 1px 4px rgba(52, 199, 89, 0.3);
+}
+
+.process-button:disabled, .play-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.audio-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.progress-container {
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: #007aff;
+    border-radius: 4px;
+    transition: width 0.1s linear;
+}
+
+/* Gộp thông báo trạng thái và thời gian xử lý thành một dòng */
+.status-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 22px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    padding: 5px;
+}
+
+.status-message {
+    margin-bottom: 0;
+}
+
+.status-message.error {
+    color: #ff3b30;
+}
+
+.status-message.success {
+    color: #34c759;
+}
+
+.status-message.loading {
+    color: #007aff;
+}
+
+.status-message.loading::after {
+    content: "";
+    animation: dots 1.5s infinite;
+}
+
+@keyframes dots {
+    0%, 20% { content: "."; }
+    40% { content: ".."; }
+    60%, 100% { content: "..."; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 550px) {
+    .container {
+        padding: 8px;
+        max-height: 90vh;
+    }
+    
+    .content {
+        padding: 12px;
+    }
+    
+    .avatar-container {
+        width: 220px; /* Tăng kích thước avatar lên lớn hơn cho màn hình nhỏ */
+        height: 220px; /* Tăng kích thước avatar lên lớn hơn cho màn hình nhỏ */
+    }
+    
+    .file-input-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .file-name {
+        margin-left: 0;
+    }
+}

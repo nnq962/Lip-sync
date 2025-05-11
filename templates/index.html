@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lip Sync Avatar</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="icon" type="image/x-icon" href="../static/images/heart.svg">
+</head>
+<body>
+    <div class="container">
+        <div class="app-window">
+            <div class="window-header">
+                <div class="window-controls">
+                    <div class="control close"></div>
+                    <div class="control minimize"></div>
+                    <div class="control expand"></div>
+                </div>
+                <div class="window-title">Lip Sync Avatar</div>
+            </div>
+            
+            <div class="content">
+                <div class="avatar-container">
+                    <img id="avatar" src="../static/images/avatar.png" alt="Avatar" class="avatar-image">
+                </div>
+                
+                <div class="controls">
+                    <div class="file-upload-container">
+                        <div class="file-upload-group">
+                            <label for="audio-file">Chọn file âm thanh:</label>
+                            <div class="file-input-wrapper">
+                                <input type="file" id="audio-file" accept="audio/*">
+                                <span class="file-name" id="audio-file-name">Chưa chọn file...</span>
+                            </div>
+                        </div>
+                        
+                        <div class="file-upload-group">
+                            <label for="transcript-text">Nhập văn bản:</label>
+                            <textarea id="transcript-text" placeholder="Nhập văn bản tương ứng với audio..."></textarea>
+                        </div>
+                    </div>
+                    
+                    <!-- Nút xử lý và nút phát trên cùng một hàng, cùng kích thước -->
+                    <div class="buttons-row">
+                        <button id="process-button" class="process-button" disabled>Xử lý</button>
+                        <button id="play-button" class="play-button" disabled>Phát</button>
+                    </div>
+                    
+                    <div class="audio-controls">
+                        <div class="progress-container">
+                            <div id="progress-bar" class="progress-bar"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Gộp thông báo trạng thái và thời gian xử lý -->
+                    <div class="status-container">
+                        <div id="status-message" class="status-message"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../static/script.js"></script>
+</body>
+</html>
