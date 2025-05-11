@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     // API URL - Thay đổi thành URL của API mới
-    const API_URL = 'http://localhost:8000/api/generate-viseme';
+    const API_URL = 'http://192.168.0.101:8000/api/generate-viseme';
     
     // Các phần tử DOM
     const avatar = document.getElementById('avatar');

@@ -16,3 +16,21 @@ pip install python-multipart
 2025-05-11 16:07:50,324 - app - INFO - Deleted temporary file: /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/e2635037-497a-4339-b7a1-91cbead4938b_audio.wav
 2025-05-11 16:07:50,324 - app - INFO - Deleted temporary file: /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/e2635037-497a-4339-b7a1-91cbead4938b_transcript.txt
 2025-05-11 16:07:50,324 - app - INFO - Deleted temporary file: /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/results/e2635037-497a-4339-b7a1-91cbead4938b_alignment.json
+2025-05-11 17:50:38,067 - __main__ - INFO - Loaded phoneme to viseme mapping from /Users/quyetnguyen/Project/Lip-sync/data/vietnamese-phoneme-to-viseme.json
+2025-05-11 17:50:38,289 - __mp_main__ - INFO - Loaded phoneme to viseme mapping from /Users/quyetnguyen/Project/Lip-sync/data/vietnamese-phoneme-to-viseme.json
+2025-05-11 17:50:38,314 - app - INFO - Loaded phoneme to viseme mapping from /Users/quyetnguyen/Project/Lip-sync/data/vietnamese-phoneme-to-viseme.json
+2025-05-11 17:53:20,484 - app - INFO - Request 4dd81dc3-6931-45d0-9323-8f74982df862: Processing viseme generation
+2025-05-11 17:53:20,489 - app - INFO - Request 4dd81dc3-6931-45d0-9323-8f74982df862: Saved audio file to /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/4dd81dc3-6931-45d0-9323-8f74982df862_audio.wav
+2025-05-11 17:53:20,489 - app - INFO - Created lab file at /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/4dd81dc3-6931-45d0-9323-8f74982df862_transcript.txt
+2025-05-11 17:53:20,489 - app - INFO - Starting MFA alignment: /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/4dd81dc3-6931-45d0-9323-8f74982df862_audio.wav with /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/4dd81dc3-6931-45d0-9323-8f74982df862_transcript.txt
+2025-05-11 17:53:27,678 - app - INFO - MFA alignment completed in 7.19s
+2025-05-11 17:53:27,679 - app - INFO - Request 4dd81dc3-6931-45d0-9323-8f74982df862: Completed in 7.20s with 358 visemes
+2025-05-11 17:53:27,686 - app - INFO - Deleted temporary file: /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/4dd81dc3-6931-45d0-9323-8f74982df862_audio.wav
+2025-05-11 17:53:27,686 - app - INFO - Deleted temporary file: /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/4dd81dc3-6931-45d0-9323-8f74982df862_transcript.txt
+2025-05-11 17:53:27,686 - app - INFO - Deleted temporary file: /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/results/4dd81dc3-6931-45d0-9323-8f74982df862_alignment.json
+2025-05-11 18:04:12,404 - __main__ - INFO - Loaded phoneme to viseme mapping from /Users/quyetnguyen/Project/Lip-sync/data/vietnamese-phoneme-to-viseme.json
+2025-05-11 18:04:12,627 - __mp_main__ - INFO - Loaded phoneme to viseme mapping from /Users/quyetnguyen/Project/Lip-sync/data/vietnamese-phoneme-to-viseme.json
+2025-05-11 18:04:12,651 - app - INFO - Loaded phoneme to viseme mapping from /Users/quyetnguyen/Project/Lip-sync/data/vietnamese-phoneme-to-viseme.json
+2025-05-11 18:06:14,803 - __main__ - INFO - Loaded phoneme to viseme mapping from /Users/quyetnguyen/Project/Lip-sync/data/vietnamese-phoneme-to-viseme.json
+2025-05-11 18:06:15,021 - __mp_main__ - INFO - Loaded phoneme to viseme mapping from /Users/quyetnguyen/Project/Lip-sync/data/vietnamese-phoneme-to-viseme.json
+2025-05-11 18:06:15,048 - app - INFO - Loaded phoneme to viseme mapping from /Users/quyetnguyen/Project/Lip-sync/data/vietnamese-phoneme-to-viseme.json
