@@ -93,20 +93,21 @@ body {
 
 .avatar-container {
     position: relative;
-    width: 260px; /* Tăng kích thước avatar lên lớn hơn */
-    height: 260px; /* Tăng kích thước avatar lên lớn hơn */
+    width: 240px; /* Kích thước cố định */
+    height: 240px; /* Kích thước cố định */
     margin: 0 auto 15px;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     background-color: #f8f8f8;
+    flex-shrink: 0; /* Ngăn avatar co lại */
 }
 
 .avatar-image {
     position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover; /* Thay đổi từ contain sang cover để lấp đầy container */
     transition: all 0.12s ease;
 }
 
@@ -114,6 +115,69 @@ body {
     display: flex;
     flex-direction: column;
     gap: 12px;
+}
+
+/* Language selector styling */
+.language-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.language-selector label {
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+}
+
+.language-select {
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    flex-grow: 1;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.language-select:focus {
+    outline: none;
+    border-color: #66aaff;
+    background-color: #f0f7ff;
+    box-shadow: 0 0 0 3px rgba(102, 170, 255, 0.1);
+}
+
+/* Example button styling */
+.example-button-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.example-button {
+    padding: 8px 16px;
+    background-color: #6c5ce7;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(108, 92, 231, 0.3);
+}
+
+.example-button:hover {
+    background-color: #5b4bc4;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(108, 92, 231, 0.4);
+}
+
+.example-button:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 4px rgba(108, 92, 231, 0.3);
 }
 
 .file-upload-container {
@@ -322,8 +386,8 @@ body {
     }
     
     .avatar-container {
-        width: 220px; /* Tăng kích thước avatar lên lớn hơn cho màn hình nhỏ */
-        height: 220px; /* Tăng kích thước avatar lên lớn hơn cho màn hình nhỏ */
+        width: 240px; /* Giữ nguyên kích thước cố định */
+        height: 240px; /* Giữ nguyên kích thước cố định */
     }
     
     .file-input-wrapper {

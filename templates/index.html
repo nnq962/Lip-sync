@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lip Sync Avatar</title>
-    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="stylesheet" href="../static/styles.css?v=1.0.1">
     <link rel="icon" type="image/x-icon" href="../static/images/heart.svg">
 </head>
 <body>
@@ -25,6 +25,20 @@
                 </div>
                 
                 <div class="controls">
+                    <!-- Lựa chọn ngôn ngữ -->
+                    <div class="language-selector">
+                        <label for="language-select">Ngôn ngữ:</label>
+                        <select id="language-select" class="language-select">
+                            <option value="vi">Tiếng Việt</option>
+                            <option value="en">Tiếng Anh</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Nút ví dụ -->
+                    <div class="example-button-row">
+                        <button id="example-button" class="example-button">Dùng ví dụ</button>
+                    </div>
+                    
                     <div class="file-upload-container">
                         <div class="file-upload-group">
                             <label for="audio-file">Chọn file âm thanh:</label>
@@ -61,6 +75,6 @@
         </div>
     </div>
     
-    <script src="../static/script.js"></script>
+    <script src="../static/script.js?v=1.0.3"></script>
 </body>
 </html>

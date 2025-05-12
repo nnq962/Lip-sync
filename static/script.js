@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // API URL - Thay đổi thành URL của API mới
-    const API_URL = 'http://192.168.0.101:8000/api/generate-viseme';
+    // API URLs
+    const API_URL = 'http://127.0.0.1:8000/api/generate-viseme';
+    const API_EXAMPLES_URL = 'http://127.0.0.1:8000/api/examples';
     
     // Các phần tử DOM
     const avatar = document.getElementById('avatar');
@@ -11,6 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const playButton = document.getElementById('play-button');
     const progressBar = document.getElementById('progress-bar');
     const statusMessage = document.getElementById('status-message');
+    const languageSelect = document.getElementById('language-select');
+    const exampleButton = document.getElementById('example-button');
     const avatarContainer = document.querySelector('.avatar-container');
     
     // Đường dẫn đến các ảnh khẩu hình (dựa trên tên file thực tế)
@@ -30,8 +33,30 @@ document.addEventListener('DOMContentLoaded', function() {
         'W.Q': '../static/images/W.Q.png'                    // W, Q
     };
     
-    // Ánh xạ từ Viseme ID (0-17) sang avatar images
-    const visemeToAvatarMap = {
+    // Ánh xạ từ Viseme ID (0-17) sang avatar images cho tiếng Việt
+    const viVisemeToAvatarMap = {
+        0: 'default',            // Rest/Neutral -> Mặc định
+        1: 'B.M.P',              // M/B/P -> B.M.P
+        2: 'F.V',                // F/V -> F.V
+        3: 'C.D.N.S.T.X.Y.Z',    // T/D -> C.D.N.S.T.X.Y.Z
+        4: 'C.D.N.S.T.X.Y.Z',    // N -> C.D.N.S.T.X.Y.Z
+        5: 'G.K',                // K/G -> G.K
+        6: 'CH.J.SH',            // CH/J/SH -> CH.J.SH
+        7: 'C.D.N.S.T.X.Y.Z',    // S/Z -> C.D.N.S.T.X.Y.Z
+        8: 'TH',                 // TH -> TH
+        9: 'L',                  // L -> L
+        10: 'L',                 // R -> L (không có ảnh riêng cho R, dùng L thay thế)
+        11: 'W.Q',               // W/J -> W.Q
+        12: 'A.E.I',             // A -> A.E.I
+        13: 'A.E.I',             // E -> A.E.I
+        14: 'EE',                // I -> EE
+        15: 'O',                 // O/Ə -> O
+        16: 'U',                 // U -> U
+        17: 'A.E.I'              // Diphthongs -> A.E.I (không có ảnh riêng cho nguyên âm đôi)
+    };
+    
+    // Ánh xạ từ Viseme ID (0-17) sang avatar images cho tiếng Anh
+    const enVisemeToAvatarMap = {
         0: 'default',            // Rest/Neutral -> Mặc định
         1: 'B.M.P',              // M/B/P -> B.M.P
         2: 'F.V',                // F/V -> F.V
@@ -60,6 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let requestAnimationFrameId = null;
     let lastVisemeIndex = -1;
     let preloadedImages = {};
+    let currentLanguage = 'vi';
     
     // Hàm kiểm tra xem có thể xử lý được không
     function checkProcessEnabled() {
@@ -71,6 +97,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Hàm kiểm tra xem có thể phát được không
     function checkPlayEnabled() {
         playButton.disabled = !(visemeData && audioFile);
+    }
+    
+    // Hàm lấy viseme mapping dựa vào ngôn ngữ hiện tại
+    function getCurrentVisemeMapping() {
+        return currentLanguage === 'vi' ? viVisemeToAvatarMap : enVisemeToAvatarMap;
     }
     
     // Lắng nghe sự kiện thay đổi file âm thanh
@@ -115,6 +146,93 @@ document.addEventListener('DOMContentLoaded', function() {
         checkProcessEnabled();
     });
     
+    // Lắng nghe sự kiện thay đổi ngôn ngữ
+    languageSelect.addEventListener('change', function() {
+        currentLanguage = languageSelect.value;
+        
+        // Cập nhật placeholder cho textarea dựa vào ngôn ngữ
+        if (currentLanguage === 'vi') {
+            transcriptText.placeholder = "Nhập văn bản tiếng Việt tương ứng với audio...";
+        } else {
+            transcriptText.placeholder = "Enter the English text corresponding to the audio...";
+        }
+        
+        // Nếu đã có visemeData, cần xử lý lại vì viseme mapping đã thay đổi
+        if (visemeData) {
+            // Thông báo cho người dùng
+            statusMessage.textContent = "Ngôn ngữ đã thay đổi. Vui lòng xử lý lại để cập nhật.";
+            statusMessage.className = "status-message";
+            
+            // Xóa visemeData để bắt buộc xử lý lại
+            visemeData = null;
+            playButton.disabled = true;
+        }
+    });
+    
+    // Lắng nghe sự kiện nút ví dụ
+    exampleButton.addEventListener('click', function() {
+        // Hiển thị trạng thái đang tải
+        statusMessage.textContent = `Đang tải ví dụ cho ${currentLanguage === 'vi' ? 'tiếng Việt' : 'tiếng Anh'}`;
+        statusMessage.className = "status-message loading";
+        
+        // Dừng phát nếu đang phát
+        if (isPlaying) {
+            stopPlayback();
+        }
+        
+        // Gọi API để lấy ví dụ
+        fetch(`${API_EXAMPLES_URL}/${currentLanguage}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Lỗi ${response.status}: ${response.statusText}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Cập nhật textarea với văn bản ví dụ
+                transcriptText.value = data.text;
+                
+                // Tải file audio ví dụ
+                return fetch(`${API_EXAMPLES_URL}/${currentLanguage}/audio`);
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Lỗi ${response.status}: ${response.statusText}`);
+                }
+                return response.blob();
+            })
+            .then(blob => {
+                // Tạo File object từ Blob
+                const fileName = `example_${currentLanguage}.wav`;
+                audioFile = new File([blob], fileName, { type: 'audio/wav' });
+                
+                // Cập nhật tên file
+                audioFileName.textContent = fileName;
+                
+                // Tạo URL cho file âm thanh
+                if (audioElement.src) {
+                    URL.revokeObjectURL(audioElement.src);
+                }
+                audioElement.src = URL.createObjectURL(audioFile);
+                
+                // Đặt lại visemeData
+                visemeData = null;
+                playButton.disabled = true;
+                
+                // Kích hoạt nút xử lý
+                checkProcessEnabled();
+                
+                // Thông báo
+                statusMessage.textContent = `Đã tải ví dụ cho ${currentLanguage === 'vi' ? 'tiếng Việt' : 'tiếng Anh'}`;
+                statusMessage.className = "status-message success";
+            })
+            .catch(error => {
+                console.error("Lỗi khi tải file ví dụ:", error);
+                statusMessage.textContent = `Lỗi khi tải file ví dụ: ${error.message}`;
+                statusMessage.className = "status-message error";
+            });
+    });
+    
     // Lắng nghe sự kiện nhấn nút Xử lý
     processButton.addEventListener('click', function() {
         if (!audioFile || transcriptText.value.trim() === '') {
@@ -135,6 +253,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const formData = new FormData();
         formData.append('audio_file', audioFile);
         formData.append('transcript', transcriptText.value.trim());
+        formData.append('language', currentLanguage);
         
         // Gọi API
         fetch(API_URL, {
@@ -257,7 +376,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Hàm bắt đầu animation loop
     function startAnimationLoop() {
         const visemeTimeline = visemeData.viseme_timeline;
-        const startTime = Date.now();
+        const visemeMapping = getCurrentVisemeMapping();
         
         function animate() {
             if (!isPlaying) return;
@@ -290,7 +409,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Cập nhật khẩu hình nếu có sự thay đổi
             if (currentVisemeIndex !== -1 && currentVisemeIndex !== lastVisemeIndex) {
-                updateAvatarImage(visemeTimeline[currentVisemeIndex]);
+                updateAvatarImage(visemeTimeline[currentVisemeIndex], visemeMapping);
                 lastVisemeIndex = currentVisemeIndex;
             }
             
@@ -303,12 +422,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Hàm cập nhật ảnh avatar dựa trên viseme ID
-    function updateAvatarImage(visemeObj) {
-        // Lấy viseme ID từ API mới
+    function updateAvatarImage(visemeObj, visemeMapping) {
+        // Lấy viseme ID từ API
         const visemeId = visemeObj.viseme;
         
         // Ánh xạ từ viseme ID sang hình ảnh avatar
-        const imageKey = visemeToAvatarMap[visemeId] || 'default';
+        const imageKey = visemeMapping[visemeId] || 'default';
         
         // Cập nhật ảnh avatar
         if (preloadedImages[imageKey]) {
@@ -318,7 +437,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         // Log để debug
-        console.log(`Phoneme: ${visemeObj.phoneme}, Viseme ID: ${visemeId}, ImageKey: ${imageKey}`);
+        // console.log(`Phoneme: ${visemeObj.phoneme}, Viseme ID: ${visemeId}, ImageKey: ${imageKey}, Language: ${currentLanguage}`);
     }
     
     // Hàm preload tất cả các ảnh

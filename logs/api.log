@@ -34,3 +34,91 @@ pip install python-multipart
 2025-05-11 18:06:14,803 - __main__ - INFO - Loaded phoneme to viseme mapping from /Users/quyetnguyen/Project/Lip-sync/data/vietnamese-phoneme-to-viseme.json
 2025-05-11 18:06:15,021 - __mp_main__ - INFO - Loaded phoneme to viseme mapping from /Users/quyetnguyen/Project/Lip-sync/data/vietnamese-phoneme-to-viseme.json
 2025-05-11 18:06:15,048 - app - INFO - Loaded phoneme to viseme mapping from /Users/quyetnguyen/Project/Lip-sync/data/vietnamese-phoneme-to-viseme.json
+2025-05-12 09:50:01,806 - __main__ - INFO - Loaded Vietnamese phoneme to viseme mapping from /Users/quyetnguyen/Project/Lip-sync/data/vietnamese-phoneme-to-viseme.json
+2025-05-12 09:50:01,806 - __main__ - INFO - Loaded English phoneme to viseme mapping from /Users/quyetnguyen/Project/Lip-sync/data/english-phoneme-to-viseme.json
+2025-05-12 09:50:02,034 - __mp_main__ - INFO - Loaded Vietnamese phoneme to viseme mapping from /Users/quyetnguyen/Project/Lip-sync/data/vietnamese-phoneme-to-viseme.json
+2025-05-12 09:50:02,035 - __mp_main__ - INFO - Loaded English phoneme to viseme mapping from /Users/quyetnguyen/Project/Lip-sync/data/english-phoneme-to-viseme.json
+2025-05-12 09:50:02,063 - app - INFO - Loaded Vietnamese phoneme to viseme mapping from /Users/quyetnguyen/Project/Lip-sync/data/vietnamese-phoneme-to-viseme.json
+2025-05-12 09:50:02,063 - app - INFO - Loaded English phoneme to viseme mapping from /Users/quyetnguyen/Project/Lip-sync/data/english-phoneme-to-viseme.json
+2025-05-12 09:51:33,334 - app - INFO - Request 4416fbe0-d6cd-4a6a-b6db-8aedde8647f4: Processing viseme generation for en
+2025-05-12 09:51:33,339 - app - INFO - Request 4416fbe0-d6cd-4a6a-b6db-8aedde8647f4: Saved audio file to /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/4416fbe0-d6cd-4a6a-b6db-8aedde8647f4_audio.wav
+2025-05-12 09:51:33,339 - app - INFO - Created lab file at /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/4416fbe0-d6cd-4a6a-b6db-8aedde8647f4_transcript.txt
+2025-05-12 09:51:33,339 - app - INFO - Starting MFA alignment for en: /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/4416fbe0-d6cd-4a6a-b6db-8aedde8647f4_audio.wav with /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/4416fbe0-d6cd-4a6a-b6db-8aedde8647f4_transcript.txt
+2025-05-12 09:51:47,771 - app - INFO - MFA alignment completed in 14.43s
+2025-05-12 09:51:47,772 - app - INFO - Request 4416fbe0-d6cd-4a6a-b6db-8aedde8647f4: Completed in 14.44s with 22 visemes
+2025-05-12 09:51:47,775 - app - INFO - Deleted temporary file: /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/4416fbe0-d6cd-4a6a-b6db-8aedde8647f4_audio.wav
+2025-05-12 09:51:47,775 - app - INFO - Deleted temporary file: /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/4416fbe0-d6cd-4a6a-b6db-8aedde8647f4_transcript.txt
+2025-05-12 09:51:47,775 - app - INFO - Deleted temporary file: /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/results/4416fbe0-d6cd-4a6a-b6db-8aedde8647f4_alignment.json
+2025-05-12 10:07:08,675 - __mp_main__ - INFO - Loaded Vietnamese phoneme to viseme mapping from /Users/quyetnguyen/Project/Lip-sync/data/vietnamese-phoneme-to-viseme.json
+2025-05-12 10:07:08,675 - __mp_main__ - INFO - Loaded English phoneme to viseme mapping from /Users/quyetnguyen/Project/Lip-sync/data/english-phoneme-to-viseme.json
+2025-05-12 10:07:08,743 - app - INFO - Loaded Vietnamese phoneme to viseme mapping from /Users/quyetnguyen/Project/Lip-sync/data/vietnamese-phoneme-to-viseme.json
+2025-05-12 10:07:08,743 - app - INFO - Loaded English phoneme to viseme mapping from /Users/quyetnguyen/Project/Lip-sync/data/english-phoneme-to-viseme.json
+2025-05-12 10:07:42,187 - __mp_main__ - INFO - Loaded Vietnamese phoneme to viseme mapping from /Users/quyetnguyen/Project/Lip-sync/data/vietnamese-phoneme-to-viseme.json
+2025-05-12 10:07:42,187 - __mp_main__ - INFO - Loaded English phoneme to viseme mapping from /Users/quyetnguyen/Project/Lip-sync/data/english-phoneme-to-viseme.json
+2025-05-12 10:07:42,228 - app - INFO - Loaded Vietnamese phoneme to viseme mapping from /Users/quyetnguyen/Project/Lip-sync/data/vietnamese-phoneme-to-viseme.json
+2025-05-12 10:07:42,229 - app - INFO - Loaded English phoneme to viseme mapping from /Users/quyetnguyen/Project/Lip-sync/data/english-phoneme-to-viseme.json
+2025-05-12 10:11:54,023 - __main__ - INFO - Loaded Vietnamese phoneme to viseme mapping from /Users/quyetnguyen/Project/Lip-sync/data/vietnamese-phoneme-to-viseme.json
+2025-05-12 10:11:54,023 - __main__ - INFO - Loaded English phoneme to viseme mapping from /Users/quyetnguyen/Project/Lip-sync/data/english-phoneme-to-viseme.json
+2025-05-12 10:11:54,245 - __mp_main__ - INFO - Loaded Vietnamese phoneme to viseme mapping from /Users/quyetnguyen/Project/Lip-sync/data/vietnamese-phoneme-to-viseme.json
+2025-05-12 10:11:54,245 - __mp_main__ - INFO - Loaded English phoneme to viseme mapping from /Users/quyetnguyen/Project/Lip-sync/data/english-phoneme-to-viseme.json
+2025-05-12 10:11:54,270 - app - INFO - Loaded Vietnamese phoneme to viseme mapping from /Users/quyetnguyen/Project/Lip-sync/data/vietnamese-phoneme-to-viseme.json
+2025-05-12 10:11:54,270 - app - INFO - Loaded English phoneme to viseme mapping from /Users/quyetnguyen/Project/Lip-sync/data/english-phoneme-to-viseme.json
+2025-05-12 10:14:55,736 - app - INFO - Request c3043521-e08b-492c-9022-bcffef8114ae: Processing viseme generation for vi
+2025-05-12 10:14:55,743 - app - INFO - Request c3043521-e08b-492c-9022-bcffef8114ae: Saved audio file to /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/c3043521-e08b-492c-9022-bcffef8114ae_audio.wav
+2025-05-12 10:14:55,743 - app - INFO - Created lab file at /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/c3043521-e08b-492c-9022-bcffef8114ae_transcript.txt
+2025-05-12 10:14:55,743 - app - INFO - Starting MFA alignment for vi: /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/c3043521-e08b-492c-9022-bcffef8114ae_audio.wav with /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/c3043521-e08b-492c-9022-bcffef8114ae_transcript.txt
+2025-05-12 10:15:00,903 - app - INFO - MFA alignment completed in 5.16s
+2025-05-12 10:15:00,904 - app - INFO - Request c3043521-e08b-492c-9022-bcffef8114ae: Completed in 5.17s with 358 visemes
+2025-05-12 10:15:00,910 - app - INFO - Deleted temporary file: /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/c3043521-e08b-492c-9022-bcffef8114ae_audio.wav
+2025-05-12 10:15:00,910 - app - INFO - Deleted temporary file: /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/c3043521-e08b-492c-9022-bcffef8114ae_transcript.txt
+2025-05-12 10:15:00,911 - app - INFO - Deleted temporary file: /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/results/c3043521-e08b-492c-9022-bcffef8114ae_alignment.json
+2025-05-12 10:15:14,259 - app - INFO - Request ffd78456-151c-4781-ad49-49f938b1f266: Processing viseme generation for en
+2025-05-12 10:15:14,262 - app - INFO - Request ffd78456-151c-4781-ad49-49f938b1f266: Saved audio file to /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/ffd78456-151c-4781-ad49-49f938b1f266_audio.wav
+2025-05-12 10:15:14,262 - app - INFO - Created lab file at /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/ffd78456-151c-4781-ad49-49f938b1f266_transcript.txt
+2025-05-12 10:15:14,263 - app - INFO - Starting MFA alignment for en: /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/ffd78456-151c-4781-ad49-49f938b1f266_audio.wav with /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/ffd78456-151c-4781-ad49-49f938b1f266_transcript.txt
+2025-05-12 10:15:29,240 - app - INFO - MFA alignment completed in 14.98s
+2025-05-12 10:15:29,241 - app - INFO - Request ffd78456-151c-4781-ad49-49f938b1f266: Completed in 14.98s with 22 visemes
+2025-05-12 10:15:29,245 - app - INFO - Deleted temporary file: /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/ffd78456-151c-4781-ad49-49f938b1f266_audio.wav
+2025-05-12 10:15:29,245 - app - INFO - Deleted temporary file: /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/ffd78456-151c-4781-ad49-49f938b1f266_transcript.txt
+2025-05-12 10:15:29,245 - app - INFO - Deleted temporary file: /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/results/ffd78456-151c-4781-ad49-49f938b1f266_alignment.json
+2025-05-12 10:17:15,556 - app - ERROR - Error reading example text for en: [Errno 2] No such file or directory: '/Users/quyetnguyen/Project/Lip-sync/static/examples/example_en.txt'
+2025-05-12 10:17:36,516 - app - INFO - Request 0aeb2770-0eab-4662-ac95-345000e83068: Processing viseme generation for en
+2025-05-12 10:17:36,520 - app - INFO - Request 0aeb2770-0eab-4662-ac95-345000e83068: Saved audio file to /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/0aeb2770-0eab-4662-ac95-345000e83068_audio.wav
+2025-05-12 10:17:36,520 - app - INFO - Created lab file at /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/0aeb2770-0eab-4662-ac95-345000e83068_transcript.txt
+2025-05-12 10:17:36,520 - app - INFO - Starting MFA alignment for en: /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/0aeb2770-0eab-4662-ac95-345000e83068_audio.wav with /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/0aeb2770-0eab-4662-ac95-345000e83068_transcript.txt
+2025-05-12 10:17:51,885 - app - INFO - MFA alignment completed in 15.36s
+2025-05-12 10:17:51,887 - app - INFO - Request 0aeb2770-0eab-4662-ac95-345000e83068: Completed in 15.37s with 395 visemes
+2025-05-12 10:17:51,895 - app - INFO - Deleted temporary file: /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/0aeb2770-0eab-4662-ac95-345000e83068_audio.wav
+2025-05-12 10:17:51,895 - app - INFO - Deleted temporary file: /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/0aeb2770-0eab-4662-ac95-345000e83068_transcript.txt
+2025-05-12 10:17:51,895 - app - INFO - Deleted temporary file: /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/results/0aeb2770-0eab-4662-ac95-345000e83068_alignment.json
+2025-05-12 10:18:48,333 - app - INFO - Request e7529415-0599-458a-94f1-d5b812074f05: Processing viseme generation for vi
+2025-05-12 10:18:48,337 - app - INFO - Request e7529415-0599-458a-94f1-d5b812074f05: Saved audio file to /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/e7529415-0599-458a-94f1-d5b812074f05_audio.wav
+2025-05-12 10:18:48,339 - app - INFO - Created lab file at /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/e7529415-0599-458a-94f1-d5b812074f05_transcript.txt
+2025-05-12 10:18:48,339 - app - INFO - Starting MFA alignment for vi: /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/e7529415-0599-458a-94f1-d5b812074f05_audio.wav with /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/e7529415-0599-458a-94f1-d5b812074f05_transcript.txt
+2025-05-12 10:18:53,390 - app - INFO - MFA alignment completed in 5.05s
+2025-05-12 10:18:53,392 - app - INFO - Request e7529415-0599-458a-94f1-d5b812074f05: Completed in 5.06s with 358 visemes
+2025-05-12 10:18:53,397 - app - INFO - Deleted temporary file: /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/e7529415-0599-458a-94f1-d5b812074f05_audio.wav
+2025-05-12 10:18:53,397 - app - INFO - Deleted temporary file: /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/e7529415-0599-458a-94f1-d5b812074f05_transcript.txt
+2025-05-12 10:18:53,397 - app - INFO - Deleted temporary file: /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/results/e7529415-0599-458a-94f1-d5b812074f05_alignment.json
+2025-05-12 10:27:34,548 - app - INFO - Request 72930616-1c32-4fc0-842e-a2094ab4142a: Processing viseme generation for en
+2025-05-12 10:27:34,552 - app - INFO - Request 72930616-1c32-4fc0-842e-a2094ab4142a: Saved audio file to /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/72930616-1c32-4fc0-842e-a2094ab4142a_audio.wav
+2025-05-12 10:27:34,552 - app - INFO - Created lab file at /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/72930616-1c32-4fc0-842e-a2094ab4142a_transcript.txt
+2025-05-12 10:27:34,552 - app - INFO - Starting MFA alignment for en: /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/72930616-1c32-4fc0-842e-a2094ab4142a_audio.wav with /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/72930616-1c32-4fc0-842e-a2094ab4142a_transcript.txt
+2025-05-12 10:27:49,539 - app - INFO - MFA alignment completed in 14.99s
+2025-05-12 10:27:49,541 - app - INFO - Request 72930616-1c32-4fc0-842e-a2094ab4142a: Completed in 14.99s with 395 visemes
+2025-05-12 10:27:49,550 - app - INFO - Deleted temporary file: /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/72930616-1c32-4fc0-842e-a2094ab4142a_audio.wav
+2025-05-12 10:27:49,550 - app - INFO - Deleted temporary file: /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/72930616-1c32-4fc0-842e-a2094ab4142a_transcript.txt
+2025-05-12 10:27:49,550 - app - INFO - Deleted temporary file: /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/results/72930616-1c32-4fc0-842e-a2094ab4142a_alignment.json
+2025-05-12 10:28:59,869 - __mp_main__ - INFO - Loaded Vietnamese phoneme to viseme mapping from /Users/quyetnguyen/Project/Lip-sync/data/vietnamese-phoneme-to-viseme.json
+2025-05-12 10:28:59,870 - __mp_main__ - INFO - Loaded English phoneme to viseme mapping from /Users/quyetnguyen/Project/Lip-sync/data/english-phoneme-to-viseme.json
+2025-05-12 10:28:59,904 - app - INFO - Loaded Vietnamese phoneme to viseme mapping from /Users/quyetnguyen/Project/Lip-sync/data/vietnamese-phoneme-to-viseme.json
+2025-05-12 10:28:59,904 - app - INFO - Loaded English phoneme to viseme mapping from /Users/quyetnguyen/Project/Lip-sync/data/english-phoneme-to-viseme.json
+2025-05-12 10:29:08,377 - app - INFO - Request 138f07c0-f005-4795-9925-88e5685c7ef8: Processing viseme generation for vi
+2025-05-12 10:29:08,383 - app - INFO - Request 138f07c0-f005-4795-9925-88e5685c7ef8: Saved audio file to /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/138f07c0-f005-4795-9925-88e5685c7ef8_audio.wav
+2025-05-12 10:29:08,384 - app - INFO - Created lab file at /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/138f07c0-f005-4795-9925-88e5685c7ef8_transcript.txt
+2025-05-12 10:29:08,385 - app - INFO - Starting MFA alignment for vi: /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/138f07c0-f005-4795-9925-88e5685c7ef8_audio.wav with /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/138f07c0-f005-4795-9925-88e5685c7ef8_transcript.txt
+2025-05-12 10:29:13,287 - app - INFO - MFA alignment completed in 4.90s
+2025-05-12 10:29:13,289 - app - INFO - Request 138f07c0-f005-4795-9925-88e5685c7ef8: Completed in 4.91s with 358 visemes
+2025-05-12 10:29:13,292 - app - INFO - Deleted temporary file: /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/138f07c0-f005-4795-9925-88e5685c7ef8_audio.wav
+2025-05-12 10:29:13,292 - app - INFO - Deleted temporary file: /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/uploads/138f07c0-f005-4795-9925-88e5685c7ef8_transcript.txt
+2025-05-12 10:29:13,293 - app - INFO - Deleted temporary file: /var/folders/yw/r8k79wj55tqgd4bxdrhy29bm0000gn/T/viseme_api/results/138f07c0-f005-4795-9925-88e5685c7ef8_alignment.json

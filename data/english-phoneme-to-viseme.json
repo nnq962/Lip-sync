@@ -1,0 +1,221 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "language": "English (US)",
+    "description": "Mapping from English ARPAbet phonemes to visemes",
+    "source": "English (US) ARPA acoustic model",
+    "totalVisemes": 18,
+    "totalPhonemes": 92
+  },
+  "visemeDescriptions": {
+    "0": {
+      "name": "Rest/Neutral",
+      "description": "Miệng đóng tự nhiên, môi thư giãn"
+    },
+    "1": {
+      "name": "M/B/P",
+      "description": "Môi khép hoàn toàn"
+    },
+    "2": {
+      "name": "F/V",
+      "description": "Môi dưới chạm răng trên"
+    },
+    "3": {
+      "name": "T/D",
+      "description": "Đầu lưỡi chạm răng"
+    },
+    "4": {
+      "name": "N",
+      "description": "Miệng hơi mở, lưỡi chạm lợi (âm mũi)"
+    },
+    "5": {
+      "name": "K/G",
+      "description": "Lưỡi chạm cuống họng"
+    },
+    "6": {
+      "name": "CH/J/SH",
+      "description": "Miệng hơi mở, lưỡi uốn cong"
+    },
+    "7": {
+      "name": "S/Z",
+      "description": "Miệng hẹp, răng gần nhau"
+    },
+    "8": {
+      "name": "TH",
+      "description": "Lưỡi giữa răng"
+    },
+    "9": {
+      "name": "L",
+      "description": "Đầu lưỡi chạm lợi, miệng hở một bên"
+    },
+    "10": {
+      "name": "R",
+      "description": "Lưỡi rung phía trước"
+    },
+    "11": {
+      "name": "W/J",
+      "description": "Môi tròn/bán nguyên âm"
+    },
+    "12": {
+      "name": "A",
+      "description": "Miệng mở rộng"
+    },
+    "13": {
+      "name": "E",
+      "description": "Miệng hơi mở, môi căng ngang"
+    },
+    "14": {
+      "name": "I",
+      "description": "Miệng gần như đóng, môi căng ngang"
+    },
+    "15": {
+      "name": "O/Ə",
+      "description": "Miệng hơi mở tròn"
+    },
+    "16": {
+      "name": "U",
+      "description": "Miệng đóng tròn"
+    },
+    "17": {
+      "name": "Diphthongs",
+      "description": "Hình dạng miệng chuyển đổi"
+    }
+  },
+  "phonemeToViseme": {
+    "sil": 0,
+    "spn": 0,
+    "pause": 0,
+    "<eps>": 0,
+    
+    "#0": 0,
+    "#1": 0,
+    "#2": 0,
+    "#3": 0,
+    "#4": 0,
+    "#5": 0,
+    "#6": 0,
+    "#7": 0,
+    "#8": 0,
+    "#9": 0,
+    "#10": 0,
+    "#11": 0,
+    "#12": 0,
+    "#13": 0,
+    "#14": 0,
+    "#15": 0,
+    "#16": 0,
+    "#17": 0,
+    "#18": 0,
+    "#19": 0,
+    
+    "B": 1,
+    "M": 1,
+    "P": 1,
+    
+    "F": 2,
+    "V": 2,
+    
+    "T": 3,
+    "D": 3,
+    "DH": 3,
+    
+    "N": 4,
+    "NG": 4,
+    
+    "K": 5,
+    "G": 5,
+    
+    "CH": 6,
+    "JH": 6,
+    "SH": 6,
+    "ZH": 6,
+    
+    "S": 7,
+    "Z": 7,
+    
+    "TH": 8,
+    
+    "L": 9,
+    
+    "R": 10,
+    "ER0": 10,
+    "ER1": 10,
+    "ER2": 10,
+    
+    "W": 11,
+    "Y": 11,
+    "HH": 11,
+    
+    "AA0": 12,
+    "AA1": 12,
+    "AA2": 12,
+    "AE0": 12,
+    "AE1": 12,
+    "AE2": 12,
+    "AH0": 12,
+    "AH1": 12,
+    "AH2": 12,
+    "AW0": 12,
+    "AW1": 12,
+    "AW2": 12,
+    
+    "EH0": 13,
+    "EH1": 13,
+    "EH2": 13,
+    "EY0": 13,
+    "EY1": 13,
+    "EY2": 13,
+    
+    "IH0": 14,
+    "IH1": 14,
+    "IH2": 14,
+    "IY0": 14,
+    "IY1": 14,
+    "IY2": 14,
+    
+    "AO0": 15,
+    "AO1": 15,
+    "AO2": 15,
+    "OW0": 15,
+    "OW1": 15,
+    "OW2": 15,
+    "OY0": 15,
+    "OY1": 15,
+    "OY2": 15,
+    
+    "UH0": 16,
+    "UH1": 16,
+    "UH2": 16,
+    "UW0": 16,
+    "UW1": 16,
+    "UW2": 16,
+    
+    "AY0": 17,
+    "AY1": 17,
+    "AY2": 17
+  },
+  "visemeGroups": {
+    "0": ["sil", "spn", "<eps>", "pause", "#0", "#1", "#2", "#3", "#4", "#5", "#6", "#7", "#8", "#9", "#10", "#11", "#12", "#13", "#14", "#15", "#16", "#17", "#18", "#19"],
+    "1": ["B", "M", "P"],
+    "2": ["F", "V"],
+    "3": ["T", "D", "DH"],
+    "4": ["N", "NG"],
+    "5": ["K", "G"],
+    "6": ["CH", "JH", "SH", "ZH"],
+    "7": ["S", "Z"],
+    "8": ["TH"],
+    "9": ["L"],
+    "10": ["R", "ER0", "ER1", "ER2"],
+    "11": ["W", "Y", "HH"],
+    "12": ["AA0", "AA1", "AA2", "AE0", "AE1", "AE2", "AH0", "AH1", "AH2", "AW0", "AW1", "AW2"],
+    "13": ["EH0", "EH1", "EH2", "EY0", "EY1", "EY2"],
+    "14": ["IH0", "IH1", "IH2", "IY0", "IY1", "IY2"],
+    "15": ["AO0", "AO1", "AO2", "OW0", "OW1", "OW2", "OY0", "OY1", "OY2"],
+    "16": ["UH0", "UH1", "UH2", "UW0", "UW1", "UW2"],
+    "17": ["AY0", "AY1", "AY2"]
+  },
+  "usage": {
+    "javascript": "function mapPhonemeToViseme(phoneme) {\n  // Lấy viseme từ bảng mapping\n  if (phonemeToVisemeMap[phoneme] !== undefined) {\n    return phonemeToVisemeMap[phoneme];\n  }\n  \n  // Nếu không tìm thấy, trả về viseme mặc định (0 - Rest)\n  console.log(`Không tìm thấy viseme cho phoneme: ${phoneme}, sử dụng viseme mặc định 0`);\n  return 0;\n}",
+    "python": "def map_phoneme_to_viseme(phoneme, phoneme_to_viseme_map):\n  # Lấy viseme từ bảng mapping\n  if phoneme in phoneme_to_viseme_map:\n    return phoneme_to_viseme_map[phoneme]\n  \n  # Nếu không tìm thấy, trả về viseme mặc định (0 - Rest)\n  print(f\"Không tìm thấy viseme cho phoneme: {phoneme}, sử dụng viseme mặc định 0\")\n  return 0"
+  }
+}
